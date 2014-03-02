@@ -1,0 +1,15 @@
+Ext.define('prueba.store.Login',{
+    extend:'Ext.data.Store',
+    config:{
+        //model:'prueba.model.Place',
+        autoLoad:'true',
+        proxy:{
+            type:'ajax',
+            url:'http://192.168.1.131/portal/mobile/lib/process_login.php',
+            reader:{
+                type:'json',
+                rootProperty:''
+            }
+        }
+    }
+});
